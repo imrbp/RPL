@@ -2,9 +2,9 @@
 tugas RPL etdah gitulah yak
 
 1. Putra Dwi Prasetyo		        (G64190037)
-2. Tri Aji Handayani 			      (G64190046)
-3. I Made Raditya Bayu Pangestu (G64190075)
-4. Novaldi 				              (G64190086)
+1. Tri Aji Handayani 			      (G64190046)
+1. I Made Raditya Bayu Pangestu (G64190075)
+1. Novaldi 				              (G64190086)
 
 WareWarehouse
 
