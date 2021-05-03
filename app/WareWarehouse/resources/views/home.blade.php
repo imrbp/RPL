@@ -5,4 +5,5 @@
 <p>This is my body content.</p>
 <a href="/contact">contact</a>
 <a href="/login">login</a>
+<a href="/register">reg</a>
 @endsection

@@ -125,6 +125,13 @@
             </div>
         </div>
         <div class="page" style="display: none;">
+            <!-- username -->
+            <div class="m-3 row">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="username" required>
+            </div>
+        </div>
+        <div class="page" style="display: none;">
             <!-- Select Question -->
             <div class="m-3 row">
                 <x-label :value="__('Questions')" />
@@ -147,12 +154,12 @@
 
 
     <div class="flex items-center justify-end mt-4">
-        <button id="next" type="button" class="btn btn-primary" onclick="nextPrev(1)">
-            Next
-        </button>
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
     </div>
 
     <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
     </div>
@@ -171,9 +178,9 @@
                 document.getElementById("prevBtn").style.display = "inline";
             }
             if (stepNo == (pageEle.length - 1)) {
-                document.getElementById("next").innerHTML = "Submit";
+                document.getElementById("nextBtn").innerHTML = "Submit";
             } else {
-                document.getElementById("next").innerHTML = "Next";
+                document.getElementById("nextBtn").innerHTML = "Next";
             }
             changeStepIndicator(stepNo)
         }

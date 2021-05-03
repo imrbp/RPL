@@ -43,6 +43,7 @@ class RegisteredUserController extends Controller
             'password' => 'required|string|min:8',
             'phone' => 'required|string|min:6',
             'address' => 'required|string|max:255',
+            'username' => 'required|string|max:255|unique:users',
             'question' => 'required|string|max:5',
             'answer' => 'required|string|max:255'
         ]);
@@ -54,6 +55,7 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
             'phone' => $request->phone,
             'address' => $request->address,
+            'username' => $request->username,
             'question' => $request->question,
             'answer' => $request->answer
         ]);
