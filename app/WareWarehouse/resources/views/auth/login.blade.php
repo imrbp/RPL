@@ -13,16 +13,17 @@
 
     <!-- Email Address -->
     <div class="m-3">
-        <x-label for="email" :value="__('Email')" />
-
-        <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+        <x-label for="login" :value="__('Email/Username')" />
+        <input type="text" class="form-control {{ $errors->has('username') || $errors->has('email') ?'is-invalid':'' }}" name="login" value="{{ old('username') ? old('username') : old('email')  }}" placeholder="Username or Email" />
+        <!-- <x-input id="login" class="block mt-1 w-full" type="text" name="login" :value="old('username')?:old('email')" required autofocus /> -->
     </div>
 
     <!-- Password -->
     <div class="m-4">
         <x-label for="password" :value="__('Password')" />
 
-        <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+
+        <x-input id="password" class="block mt-1 w-full" type="text" name="password" required autocomplete="current-password" />
     </div>
 
     <!-- Forgot Password -->

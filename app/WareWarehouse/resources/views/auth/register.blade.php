@@ -3,52 +3,9 @@
 
 @section('content')
 <style>
-    * {
-        box-sizing: border-box;
-    }
-
-    body {
-        background-color: #f1f1f1;
-    }
-
-    #regForm {
-        margin: 100px auto;
-        font-family: Raleway;
-        padding: 40px;
-        width: 70%;
-        min-width: 300px;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    input {
-        padding: 10px;
-        width: 100%;
-        font-size: 17px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        border: 1px solid #aaaaaa;
-    }
-
-    /* Mark input boxes that gets an error on validation: */
-    input.invalid {
-        background-color: #ffdddd;
-    }
-
     /* Hide all steps by default: */
     .page {
         display: none;
-    }
-
-    button {
-        background-color: #4CAF50;
-        color: #ffffff;
-        border: none;
-        padding: 10px 20px;
-        font-size: 17px;
-        font-family: Raleway;
-        cursor: pointer;
     }
 
     button:hover {
@@ -79,21 +36,10 @@
     }
 </style>
 
-
-<form method="POST" id="regForm" action="{{ route('register') }}">
+<form method="POST" id="regForm">
     @csrf
+    <div class="col card">
 
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
-
-    <div class="col">
         <div class="page" style="display: none;">
             <!-- Name -->
             <div class=" m-3 row">
@@ -128,7 +74,7 @@
             <!-- username -->
             <div class="m-3 row">
                 <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="username" required>
+                <input id="username" name="username" type="text" class="form-control" placeholder="username">
             </div>
         </div>
         <div class="page" style="display: none;">
