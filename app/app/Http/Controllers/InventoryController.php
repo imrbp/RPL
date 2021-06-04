@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\viewInventory;
 use App\Models\Item;
 use App\Models\Inventory;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rules\In;
@@ -95,23 +96,30 @@ class InventoryController extends Controller
         $shelf = $request->shelf;
         $keyword  = $request->keyword;
 
-        if (isEmpty($keyword)) {
-            $data = Inventory::paginate(10);
-            return view('cores.laporan', ['datas' =>  $data]);
+        if ($keyword) {
+            $data = Inventory::whereHas('item', function (Builder $query) use ($keyword) {
+                $query->where('name', 'like', '%' . $keyword . '%')
+                    ->orWhere('quantity', 'like', '%' . $keyword . '%');
+            })->paginate(10);
         }
-        // if (!isEmpty($keyword)) {
+        if (!$keyword && !$level && !$shelf) {
+            $data = Inventory::paginate(10);
+        }
+        // if (isEmpty($request->has('keyword'))) {
+        //     $data = Inventory::paginate(10);
+        // } else /* (!isEmpty($keyword)) */ {
         //     $data = Inventory::find(1)
         //         ->paginate(10);
-        //     return view('cores.laporan', ['datas' =>  $data]);
+        //     dd($keyword);
         // }
-
+        // dd($data);
         // if ($level) {
         //     dd($keyword);
         //     $data = viewInventory::where('name', 'LIKE', '%' . $keyword . '%')
         //         ->onWhere('quantity', 'LIKE', '%' . $keyword . '%')
         //         ->paginate(10);
-        //     return view('cores.laporan', ['datas' =>  $data]);
         // }
+        return view('cores.laporan', ['datas' =>  $data]);
     }
 
     /**

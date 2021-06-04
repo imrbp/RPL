@@ -23,11 +23,11 @@
     <h2>TABEL LAPORAN</h2>
     <div class="row">
         <div class="col-md-4">
-            <form method="GET" action="">
+            <form method="GET" action="{{route('laporan')}}" id="level_filter">
                 <label for="">Level</label>
-                <select class="form-select filter" aria-label="Level" name="level" id="filter-level">
+                <select class="form-select filter" aria-label="Level" name="level" id="filter-level" onchange="levelfilter()" value="{{request()->query('level')}}">
                     <option selected>-</option>
-                    <option value="0">0</option>
+                    <option value="0" @if (request()->query('level') == "0") selected @endif >0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -36,9 +36,9 @@
             </form>
         </div>
         <div class="col-md-4">
-            <form method="GET" action="">
+            <form method="GET" action="{{route('laporan')}}" id="shelf_filter">
                 <label for="">Shelf</label>
-                <select class="form-select filter" aria-label="Shelf" name="shelf" id="filter-shelf">
+                <select class="form-select filter" aria-label="Shelf" name="shelf" id="filter-shelf" onchange="shelffilter()" value="{{request()->query('shelf')}}">
                     <option selected>-</option>
                     <option value="A">A</option>
                     <option value="B">B</option>
@@ -48,10 +48,10 @@
         </div>
 
         <div class="col-md-4">
-            <form method="GET" action="{{url('laporan')}}">
+            <form method="GET" action="{{route('laporan')}}">
                 <label for="">Search</label>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search" id="keyword" name="keyword">
+                    <input type="text" class="form-control" placeholder="Search" id="keyword" name="keyword" value="{{request()->query('keyword')}}">
                     <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
                 </div>
             </form>
@@ -92,5 +92,15 @@
         {{ $datas->links("pagination::bootstrap-4")}}
     </div>
 </div>
+
+<script>
+    function levelfilter() {
+        document.getElementById("level_filter").submit();
+    }
+
+    function shelffilter() {
+        document.getElementById("shelf_filter").submit();
+    }
+</script>
 
 @endsection

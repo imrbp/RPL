@@ -1,9 +1,9 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
+            <!-- <a href="/">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
+            </a> -->
         </x-slot>
 
         <!-- Session Status -->
@@ -12,41 +12,62 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
 
-            <!-- Email -->
-            <div class="m-3">
-                <x-label for="eamil" :value="__('Email')" />
-                <!-- <input type="text" class="form-control {{ $errors->has('username') || $errors->has('email') ?'is-invalid':'' }}" name="login" value="{{ old('username') ? old('username') : old('email')  }}" placeholder="Username or Email" /> -->
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+        <title>Sign In</title>
+
+        <link rel="stylesheet" type="text/css" href="{{asset('css/login.css')}}">
+        <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+        <img class="wave" src="images/t.png">
+        <div class="container">
+            <div class="img">
+                <img src="images/to.png">
             </div>
-
-            <!-- Password -->
-            <div class="m-4">
-                <x-label for="password" :value="__('Password')" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+            <div class="login-content">
+                <form action="{{ route('login')}}" id="login" method="POST">
+                    <div hidden>
+                        @csrf
+                    </div>
+                    <img src="images/y.png">
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="div">
+                            <input id="email" class="block mt-1 w-full" type="email" name="email" required autofocus placeholder="Email" />
+                            <!-- <input type="text" class="input"> -->
+                        </div>
+                    </div>
+                    <div class="input-div pass">
+                        <div class="i">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="div">
+                            <input id="password" type="password" name="password" placeholder="Password" required autocomplete="current-password" />
+                            <!-- <input type="password" class="input"> -->
+                        </div>
+                    </div>
+                    <div class="s">
+                        <a href="#" onclick="myFunction()">Login</a>
+                    </div>
+                    <!-- <div class="w">
+                        <a href="forgot-password.blade.html">Forgot Password?</a>
+                    </div> -->
+                    <div class="x">
+                        <p>
+                            <span> Don't have an account? </span>
+                            <a href="{{route('register')}}">Sign up here</a>
+                        </p>
+                    </div>
+                </form>
             </div>
-
-
-            <!-- Forgot Password -->
-            <p>Forgot <a href="/forgot-password">password?</a></p>
-            <!-- Register -->
-            <p>Don't have an account? <a href="{{route('register')}}">Register</a></p>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-                @endif
-
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-
-        </form>
+        </div>
+        <script>
+            function myFunction() {
+                document.getElementById("login").submit();
+            }
+        </script>
 
     </x-auth-card>
 </x-guest-layout>
