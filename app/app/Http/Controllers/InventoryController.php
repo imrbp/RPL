@@ -96,29 +96,24 @@ class InventoryController extends Controller
         $shelf = $request->shelf;
         $keyword  = $request->keyword;
 
-        if ($keyword) {
+        if ($level == '-') $level = null;
+        if ($shelf == '-') $shelf = null;
+
+        if ($level || $shelf || $keyword) {
             $data = Inventory::whereHas('item', function (Builder $query) use ($keyword) {
-                $query->where('name', 'like', '%' . $keyword . '%')
-                    ->orWhere('quantity', 'like', '%' . $keyword . '%');
-            })->paginate(10);
-        }
-        if (!$keyword && !$level && !$shelf) {
+                return $keyword ? $query
+                    ->where('name', 'like', '%' . $keyword . '%')
+                    ->orWhere('quantity', 'like', '%' . $keyword . '%') : '';
+            })
+                ->Where(function (Builder $query) use ($level) {
+                    return $level ? $query->where('level', '=',  $level) : '';
+                })
+                ->Where(function (Builder $query) use ($shelf) {
+                    return $shelf ? $query->where('shelf', 'like', $shelf . '%') : '';
+                })->paginate(10);
+        } else {
             $data = Inventory::paginate(10);
         }
-        // if (isEmpty($request->has('keyword'))) {
-        //     $data = Inventory::paginate(10);
-        // } else /* (!isEmpty($keyword)) */ {
-        //     $data = Inventory::find(1)
-        //         ->paginate(10);
-        //     dd($keyword);
-        // }
-        // dd($data);
-        // if ($level) {
-        //     dd($keyword);
-        //     $data = viewInventory::where('name', 'LIKE', '%' . $keyword . '%')
-        //         ->onWhere('quantity', 'LIKE', '%' . $keyword . '%')
-        //         ->paginate(10);
-        // }
         return view('cores.laporan', ['datas' =>  $data]);
     }
 
@@ -171,7 +166,6 @@ class InventoryController extends Controller
 
                 fputcsv($file, array($row['nama'], $row['quantity'], $row['level'], $row['shelf'], $row['date-in'], $row['date-out']));
             }
-
             fclose($file);
         };
 
