@@ -39,10 +39,6 @@ Route::get('/laporan', [InventoryController::class, 'show'])
     ->middleware(['auth'])
     ->name('laporan');
 
-// Route::post('/laporan', function () {
-//     return view('cores.laporan');
-// })->middleware(['auth'])->name('laporan');
-
 // Transpage
 Route::get('/transpage', [InventoryController::class, 'transpage'])
     ->middleware(['auth'])
@@ -63,18 +59,29 @@ Route::post('/addItem', [InventoryController::class, 'store'])
     ->name('addItem');
 
 // backup
-Route::get('/backup', function () {
-    return view('cores.backup');
-})->middleware(['auth'])->name('backup');
+// Route::get('/backup', function () {
+//     return view('cores.backup');
+// })->middleware(['auth'])->name('backup');
 
 Route::post('/backup', function () {
     return view('cores.backup');
 })->middleware(['auth'])->name('backupandrestore');
 
-Route::get('/download', [InventoryController::class, 'download']);
+Route::get('/backup', [InventoryController::class, 'showExport'])
+    ->middleware(['auth'])
+    ->name('backup');
+
+Route::get('/download', [InventoryController::class, 'export'])
+    ->middleware(['auth'])
+    ->name('download');
+Route::post('/download', [InventoryController::class, 'download'])
+    ->middleware(['auth'])
+    ->name('download');
 
 // Biodata
-Route::get('/biodata', [BiodataController::class, 'show'])->middleware(['auth'])->name('biodata');
+Route::get('/biodata', [BiodataController::class, 'show'])
+    ->middleware(['auth'])
+    ->name('biodata');
 
 // edit biodata
 Route::get('/editbiodata', [BiodataController::class, 'edit'])

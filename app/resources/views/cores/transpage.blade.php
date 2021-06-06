@@ -36,12 +36,21 @@
             @endforeach
         </tbody>
     </table>
-    <div class="float-end">
-        {{ $datas->links("pagination::bootstrap-4")}}
-    </div>
-    <div class="float-start">
-        <div class="float-start">
-            <a class="btn" href="/addItem" role="button" id="tambah_data">Tambah Item</a>
+    <div class="col">
+        <div class="row">
+            <div class="float-start">
+                Showing {{$datas->firstItem()}} to {{ $datas->lastItem()}} of {{$datas->total()}}
+            </div>
+        </div>
+        <div class="row-md-3">
+            <div class="float-end">
+                <a class="btn" href="/addItem" role="button" id="tambah_data">Tambah Item</a>
+            </div>
+        </div>
+        <div class="row-4">
+        </div>
+        <div>
+            {{ $datas->links("pagination::bootstrap-4")}}
         </div>
     </div>
     @endsection

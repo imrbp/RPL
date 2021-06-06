@@ -19,32 +19,12 @@
         </tbody>
     </table>
 
-    {{ $datas->links("pagination::bootstrap-4")}}
+    <div class="float-start">
+        Showing {{$datas->firstItem()}} to {{ $datas->lastItem()}} of {{$datas->total()}}
+    </div>
+    <div class="float-end">
+        {{ $datas->links("pagination::bootstrap-4")}}
+    </div>
 
-    <br>
-
-    <h2>TABEL TO DO LIST</h2>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>To Do List</th>
-                <th>Keterangan</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Masukkan Barang</td>
-                <td>Lakukan besok</td>
-            </tr>
-            <tr>
-                <td>Keluarkan Barang</td>
-                <td>Lakukan sekarang</td>
-            </tr>
-            <tr>
-                <td>Kirim Barang</td>
-                <td>Lakukan nanti</td>
-            </tr>
-        </tbody>
-    </table>
 </div>
 @endsection

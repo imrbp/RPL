@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\viewInventory;
 use App\Models\Item;
 use App\Models\Inventory;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rules\In;
 use PhpParser\Node\Expr\AssignOp\Concat;
 use Psr\Log\LogLevel;
 use Symfony\Component\Console\Input\Input;
+
+use App\Exports\InventoryExport;
+use Maatwebsite\Excel\Facades\Excel;
+use PhpOffice\PhpSpreadsheet\Reader\Csv;
 
 use function PHPUnit\Framework\isEmpty;
 
@@ -95,23 +99,25 @@ class InventoryController extends Controller
         $shelf = $request->shelf;
         $keyword  = $request->keyword;
 
-        if (isEmpty($keyword)) {
-            $data = Inventory::paginate(10);
-            return view('cores.laporan', ['datas' =>  $data]);
-        }
-        // if (!isEmpty($keyword)) {
-        //     $data = Inventory::find(1)
-        //         ->paginate(10);
-        //     return view('cores.laporan', ['datas' =>  $data]);
-        // }
+        if ($level == '-') $level = null;
+        if ($shelf == '-') $shelf = null;
 
-        // if ($level) {
-        //     dd($keyword);
-        //     $data = viewInventory::where('name', 'LIKE', '%' . $keyword . '%')
-        //         ->onWhere('quantity', 'LIKE', '%' . $keyword . '%')
-        //         ->paginate(10);
-        //     return view('cores.laporan', ['datas' =>  $data]);
-        // }
+        if ($level || $shelf || $keyword) {
+            $data = Inventory::whereHas('item', function (Builder $query) use ($keyword) {
+                return $keyword ? $query
+                    ->where('name', 'like', '%' . $keyword . '%')
+                    ->orWhere('quantity', 'like', '%' . $keyword . '%') : '';
+            })
+                ->Where(function (Builder $query) use ($level) {
+                    return $level ? $query->where('level', '=',  $level) : '';
+                })
+                ->Where(function (Builder $query) use ($shelf) {
+                    return $shelf ? $query->where('shelf', 'like', $shelf . '%') : '';
+                })->paginate(10);
+        } else {
+            $data = Inventory::paginate(10);
+        }
+        return view('cores.laporan', ['datas' =>  $data]);
     }
 
     /**
@@ -163,7 +169,6 @@ class InventoryController extends Controller
 
                 fputcsv($file, array($row['nama'], $row['quantity'], $row['level'], $row['shelf'], $row['date-in'], $row['date-out']));
             }
-
             fclose($file);
         };
 
@@ -190,5 +195,16 @@ class InventoryController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function showExport()
+    {
+
+        $data = Inventory::paginate(10);
+        return view('cores.backup', ['datas' =>  $data]);
+    }
+    public function export()
+    {
+        return Excel::download(new InventoryExport, 'data.xlsx');
     }
 }
