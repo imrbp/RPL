@@ -57,6 +57,9 @@ Route::get('/addItem', [InventoryController::class, 'create'])
 Route::post('/addItem', [InventoryController::class, 'store'])
     ->middleware(['auth'])
     ->name('addItem');
+Route::resource('item', InventoryController::class)
+    ->middleware(['auth']);
+
 
 // backup
 // Route::get('/backup', function () {
@@ -90,7 +93,8 @@ Route::get('/editbiodata', [BiodataController::class, 'edit'])
 Route::post('/editbiodata', [BiodataController::class, 'update'])
     ->middleware(['auth'])
     ->name('editbiodata');
-
+Route::resource('biodatas', BiodataController::class)
+    ->middleware(['auth']);
 // Route::post('/biodata', function () {
 //     return view('cores.biodata');
 // })->middleware(['auth'])->name('biodata');
