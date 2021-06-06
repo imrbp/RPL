@@ -128,7 +128,13 @@ class InventoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $inventory = Inventory::find($id);
+        $item = Item::find($inventory->item_id);
+        //$inventory = DB::table('items')->where('id', [$items->item_id]);
+        // return view('cores.editItem')
+          
+        return view('cores.editItem', compact('inventory', 'item'));
+
     }
 
 
@@ -181,9 +187,32 @@ class InventoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'required|string',
+            'quantity' => 'required|numeric',
+        ]);
+
+        $data = $request->all();
+
+        $item = Item::find($data['item_id']);
+        $item->name = $data['name'];
+        $item->description = $data['description'];
+        $item->quantity = $data['quantity'];
+        $item->save();
+
+        $inventory = Inventory::find($data['inventory_id']);
+        $inventory->item_id = $item->id;
+        $inventory->shelf = $data['shelf'];
+        $inventory->level = $data['level'];
+        $inventory->user_id = $data['user_id'];
+        $inventory->date_in = $data['date_in'];
+        $inventory->date_out = $data['date_out'];
+        $inventory->save();
+
+        return redirect('/transpage');
     }
 
     /**
@@ -194,7 +223,9 @@ class InventoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Inventory::where('id', $id);
+        $item->delete();
+        return redirect('/transpage');
     }
 
     public function showExport()
