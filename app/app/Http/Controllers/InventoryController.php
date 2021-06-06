@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\viewInventory;
 use App\Models\Item;
 use App\Models\Inventory;
 use Illuminate\Database\Eloquent\Builder;
@@ -12,6 +11,10 @@ use Illuminate\Validation\Rules\In;
 use PhpParser\Node\Expr\AssignOp\Concat;
 use Psr\Log\LogLevel;
 use Symfony\Component\Console\Input\Input;
+
+use App\Exports\InventoryExport;
+use Maatwebsite\Excel\Facades\Excel;
+use PhpOffice\PhpSpreadsheet\Reader\Csv;
 
 use function PHPUnit\Framework\isEmpty;
 
@@ -192,5 +195,16 @@ class InventoryController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function showExport()
+    {
+
+        $data = Inventory::paginate(10);
+        return view('cores.backup', ['datas' =>  $data]);
+    }
+    public function export()
+    {
+        return Excel::download(new InventoryExport, 'data.xlsx');
     }
 }
