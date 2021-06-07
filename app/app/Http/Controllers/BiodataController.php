@@ -105,7 +105,7 @@ class BiodataController extends Controller
         //         'address' => $request->address
         //     ]);
 
-        return route('biodata');
+        return redirect('biodata');
     }
 
     /**
