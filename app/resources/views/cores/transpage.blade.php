@@ -28,8 +28,12 @@
                 <td>{{ $item->date_out }}</td>
                 <td>
                     <div class="d-grid gap-2 d-md-block">
-                        <button class="btn btn-warning" type="button">edit</button>
-                        <button class="btn btn-danger" type="button">delete</button>
+                        <a class="btn btn-danger" href="/item/{{$item->id}}/edit" role="button" id="edit_data">edit</a>
+                        {!!Form::open(['url' => ['item', $item], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                            
+                                    {{Form::hidden('_method', 'DELETE')}}
+                                    {{Form::submit('Delete', ['class'=>'btn btn-danger'])}}
+                        {!!Form::close()!!}
                     </div>
                 </td>
             </tr>
