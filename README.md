@@ -142,6 +142,7 @@ Puji syukur kehadirat Tuhan Yang Maha Esa atas rahmat-Nya, yang telah memberikan
 1. Bapak/Ibu dosen ilmu komputer IPB University yang telah memberikan ilmu dan pengalamannya kepada kami
 2. Kakak-kakak asprak yang telah memberikan masukan dan saran terkait pengembangan aplikasi ware warehouse
 Kami berharap semoga laporan tugas akhir ini dapat bermanfaat bagi banyak pihak. Tak lupa kami mohon maaf atas segala kekurangan kami dalam pengembangan aplikasi ware warehouse serta dalam penyusunan laporan ini.
+
 ## H.2 Project Documentation
 
 Trello : [[Link](https://trello.com/b/zVA5PzEl)]  
