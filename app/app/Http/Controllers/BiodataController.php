@@ -80,9 +80,9 @@ class BiodataController extends Controller
         //
         $id = Auth::user()->getAuthIdentifier();
         $request->validate([
-            'first_name' => 'string|max:255',
+            'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'email' => 'required|string|email|max:255',
             'phone' => 'required|string|min:6',
             'address' => 'required|string|max:255',
         ]);
