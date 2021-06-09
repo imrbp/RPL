@@ -1,0 +1,9 @@
+body {
+    width:100px;
+    height:100px;
+    background: linear-gradient(to right,   
+        #9c9e9f 0%,
+        #9c9e9f 70%,
+        #33ccff 30%,
+        #33ccff 100%);
+}
