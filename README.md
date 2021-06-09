@@ -97,7 +97,11 @@ Target dari aplikasi ini adalah karyawan atau seluruh
 
 ## E.4 Entity Relationship Diagram
 
+![ERD](Screenshot_2.png)
+
 ## E.5 Arsitektur Sistem
+
+![ERD](Rubrik-Page-6.png)
 
 ## E.6 Fungsi utama yang dikembangkan
 
