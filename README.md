@@ -42,7 +42,7 @@ Perkembangan teknologi sekarang ini telah memudahkan berbagai macam pekerjaan ma
 
 ## C.2 User Profile
 
-Target dari aplikasi ini adalah karyawan atau seluruh
+Target dari aplikasi ini adalah karyawan atau seluruh pengurus gudang.
 
 ## C.1 User Story
 
@@ -91,19 +91,38 @@ Target dari aplikasi ini adalah karyawan atau seluruh
 
 ## E.1 Use Case Diagram
 
+![Use-Case](doc/User-What.png)
+
 ## E.2 Activity Diagram
+
+### Mendaftar akun
+
+### Login
+
+### Memasukan Barang
+
+### Mengedit Informasi Barang
+
+### Mengedit Biodata Barang
 
 ## E.3 Class Diagram
 
+![Class-Diagram](doc/Class-Diagram.png)
+
 ## E.4 Entity Relationship Diagram
 
-![ERD](Screenshot_2.png)
+![ERD](doc/Screenshot_2.png)
 
 ## E.5 Arsitektur Sistem
 
-![ERD](Rubrik-Page-6.png)
+![Arsitektur](doc/Rubrik-Page-6.png)
 
 ## E.6 Fungsi utama yang dikembangkan
+
+- User dapat Mendaftar terlebih dahulu melalui website WareWareHouse untuk menggunakan fasilitas yang ada
+- User data menambah, mengubah, dan menghapus barang
+- User dapat melihat barang-barang yang ada di gudang sesuai dengan filter lokasi,nama barang, atau kuantitas barang.
+- User dapat mengunduh data yang ada di gudang
 
 ## E.7 Fungsi CRUD
 
@@ -133,19 +152,44 @@ Target dari aplikasi ini adalah karyawan atau seluruh
 
 ## F.2 Link Aplikasi
 
+Aplikasi ini di deploy di **https://ngrok.com/**, oleh karena itu jika ingin menggunakan website kami, hubungi kamu.
+
 # G. Testing (Test Cases)
+
+Kami melakukan pengujian secara manual tanpa bantuan tools (postman) atau scripts.
 
 ## G.1 Positive Cases
 
+Pengujian positif merupakan jensi pengujian dengan memberikan kumpulan data yang valid sebagai input.
+
+| no  | Scenario                               | Preequisites | Steps | Expected Results | Actual Result | Status |
+| --- | -------------------------------------- | ------------ | ----- | ---------------- | ------------- | ------ |
+| 1   | User login dengan akun valid           |              |       |
+| 2   | Apache                                 |              |       |
+| 3   | Visual Studio Code atau Sublime Text 3 |              |       |
+| 4   | Figma                                  |              |       |
+
 ## G.2 Negative Cases
 
+Pengujian negatif merupakan metode pengujian dengan memberikan kumpulan data yang tidak valid.
+
+| no  | Scenario                               | Preequisites | Steps | Expected Results | Actual Result | Status |
+| --- | -------------------------------------- | ------------ | ----- | ---------------- | ------------- | ------ |
+| 1   | User login dengan akun valid           |              |       |
+| 2   | Apache                                 |              |       |
+| 3   | Visual Studio Code atau Sublime Text 3 |              |       |
+| 4   | Figma                                  |              |       |
+
 # H. Saran Untuk pengembangan selanjutnya
+
 1. Sebaiknya, aplikasi ware warehouse kedepannya dapat menjadi bentuk native sehingga dapat diinstal pada perangkat mobile.
 2. Kedepannya sebaiknya terdapat fitur forgot password sehingga pengguna tidak perlu create account ulang jika lupa password.
-3. Untuk pengembangan berikutnya, diharapkan aplikasi ware warehouse dapat digunakan oleh banyak user (lebih dari satu admin). 
+3. Untuk pengembangan berikutnya, diharapkan aplikasi ware warehouse dapat digunakan oleh banyak user (lebih dari satu admin).gi
 
 ## H.1 Ucapaan Terima Kasih
+
 Puji syukur kehadirat Tuhan Yang Maha Esa atas rahmat-Nya, yang telah memberikan kekuatan kepada kami sehingga dapat menyelesaikan pembuata aplikasi berbasis web yang bernama ware warehouse. Ucapan terima kasih kami sampaikan kepada semua pihak yang telah membantu memperlancar dalam pengerjaan aplikasi ware warehouse hingga terselesaikannya laporan ini, diantaranya :
+
 1. Bapak/Ibu dosen ilmu komputer IPB University yang telah memberikan ilmu dan pengalamannya kepada kami
 2. Kakak-kakak asprak yang telah memberikan masukan dan saran terkait pengembangan aplikasi ware warehouse
 
