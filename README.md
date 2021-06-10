@@ -182,7 +182,18 @@ Pengujian negatif merupakan metode pengujian dengan memberikan kumpulan data yan
 
 # H. Saran Untuk pengembangan selanjutnya
 
-## H.1 Ucapaan Terimakasih
+1. Sebaiknya, aplikasi ware warehouse kedepannya dapat menjadi bentuk native sehingga dapat diinstal pada perangkat mobile.
+2. Kedepannya sebaiknya terdapat fitur forgot password sehingga pengguna tidak perlu create account ulang jika lupa password.
+3. Untuk pengembangan berikutnya, diharapkan aplikasi ware warehouse dapat digunakan oleh banyak user (lebih dari satu admin).
+
+## I Ucapaan Terima Kasih
+
+Puji syukur kehadirat Tuhan Yang Maha Esa atas rahmat-Nya, yang telah memberikan kekuatan kepada kami sehingga dapat menyelesaikan pembuata aplikasi berbasis web yang bernama ware warehouse. Ucapan terima kasih kami sampaikan kepada semua pihak yang telah membantu memperlancar dalam pengerjaan aplikasi ware warehouse hingga terselesaikannya laporan ini, diantaranya :
+
+1. Bapak/Ibu dosen ilmu komputer IPB University yang telah memberikan ilmu dan pengalamannya kepada kami
+2. Kakak-kakak asprak yang telah memberikan masukan dan saran terkait pengembangan aplikasi ware warehouse
+
+Kami berharap semoga laporan tugas akhir ini dapat bermanfaat bagi banyak pihak. Tak lupa kami mohon maaf atas segala kekurangan kami dalam pengembangan aplikasi ware warehouse serta dalam penyusunan laporan ini.
 
 ## H.2 Project Documentation
 
