@@ -162,23 +162,23 @@ Kami melakukan pengujian secara manual tanpa bantuan tools (postman) atau script
 
 Pengujian positif merupakan jensi pengujian dengan memberikan kumpulan data yang valid sebagai input.
 
-| no  | Scenario                               | Preequisites | Steps | Expected Results | Actual Result | Status |
-| --- | -------------------------------------- | ------------ | ----- | ---------------- | ------------- | ------ |
-| 1   | User login dengan akun valid           |              |       |
-| 2   | Apache                                 |              |       |
-| 3   | Visual Studio Code atau Sublime Text 3 |              |       |
-| 4   | Figma                                  |              |       |
+| no  | Scenario                                                                                                          | Preequisites | Steps | Expected Results | Actual Result | Status |
+| --- | ----------------------------------------------------------------------------------------------------------------- | ------------ | ----- | ---------------- | ------------- | ------ |
+| 1   | User login dengan akun valid                                                                                      |              |       |
+| 2   | User mendaftar akun yang tidak valid                                                                              |              |       |
+| 3   | Memasukan barang dengan memasukan nama, deskripsi, kuantitas, lokasi, tanggal masuk, dan tanggal keluar(opsional) |              |       |
+| 4   | Figma                                                                                                             |              |       |
 
 ## G.2 Negative Cases
 
 Pengujian negatif merupakan metode pengujian dengan memberikan kumpulan data yang tidak valid.
 
-| no  | Scenario                               | Preequisites | Steps | Expected Results | Actual Result | Status |
-| --- | -------------------------------------- | ------------ | ----- | ---------------- | ------------- | ------ |
-| 1   | User login dengan akun valid           |              |       |
-| 2   | Apache                                 |              |       |
-| 3   | Visual Studio Code atau Sublime Text 3 |              |       |
-| 4   | Figma                                  |              |       |
+| no  | Scenario                                                                                                                  | Preequisites | Steps | Expected Results | Actual Result | Status |
+| --- | ------------------------------------------------------------------------------------------------------------------------- | ------------ | ----- | ---------------- | ------------- | ------ |
+| 1   | User login dengan akun tidak valid                                                                                        |              |       |
+| 2   | User mendaftar akun yang tidak valid                                                                                      |              |       |
+| 3   | Memasukan barang dengan tidak memasukan nama, deskripsi, kuantitas, lokasi, tanggal masuk , dan tanggal keluar (Opsional) |              |       |
+| 4   | Figma                                                                                                                     |              |       |
 
 # H. Saran Untuk pengembangan selanjutnya
 
