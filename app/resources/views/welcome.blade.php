@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Laravel</title>
+	<title>WARE WAREHOUSE</title>
 
 	<link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="{{asset('css/welcome.css')}}" />
@@ -27,6 +27,7 @@
 			<a href="#about">About</a>
 			<a href="#features">Features</a>
 			<a href="#contact">Contact</a>
+			<a href="/login">Login</a>
 		</nav>
 	</header>
 
