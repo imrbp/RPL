@@ -167,7 +167,7 @@ Pengujian positif merupakan jensi pengujian dengan memberikan kumpulan data yang
 | 1   | User login dengan akun valid                                                                                      |              |       |
 | 2   | User mendaftar akun yang tidak valid                                                                              |              |       |
 | 3   | Memasukan barang dengan memasukan nama, deskripsi, kuantitas, lokasi, tanggal masuk, dan tanggal keluar(opsional) |              |       |
-| 4   | Figma                                                                                                             |              |       |
+| 4   | Figgima                                                                                                           |              |       |
 
 ## G.2 Negative Cases
 
