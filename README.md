@@ -100,11 +100,13 @@ Target dari aplikasi ini adalah karyawan atau seluruh pengurus gudang.
 ### Login
 ![Login](doc/activitylogin.png)
 ### Memasukan Barang
-
+![AddItem](doc/activityadditem.png)
 ### Mengedit Informasi Barang
-
+![EditItem](doc/activityedititem.png)
+### Menghapus Barang
+![DeleteItem](doc/activitydeleteitem.png)
 ### Mengedit Biodata
-
+![EditBio](doc/activityeditbio.png)
 ## E.3 Class Diagram
 
 ![Class-Diagram](doc/Class-Diagram.png)
