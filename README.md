@@ -96,14 +96,14 @@ Target dari aplikasi ini adalah karyawan atau seluruh pengurus gudang.
 ## E.2 Activity Diagram
 
 ### Mendaftar akun
-
+![Register](doc/activityregister.png)
 ### Login
-
+![Login](doc/activitylogin.png)
 ### Memasukan Barang
 
 ### Mengedit Informasi Barang
 
-### Mengedit Biodata Barang
+### Mengedit Biodata
 
 ## E.3 Class Diagram
 
