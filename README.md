@@ -40,11 +40,11 @@ Perkembangan teknologi sekarang ini telah memudahkan berbagai macam pekerjaan ma
 
 # C. User Analysis
 
-## C.2 User Profile
+## C.1 User Profile
 
 Target dari aplikasi ini adalah karyawan atau seluruh pengurus gudang.
 
-## C.1 User Story
+## C.2 User Story
 
 - Sebagai pemilik warehouse, agar bisa mengontrol alur masuk-keluar item dari warehouse, saya dapat melihat pada tab log aktivitas di menu laporan untuk melihat item-item yang ada di dalam warehouse. Database akan mengirimkan data-data item-item yang ada di dalam warehouse.
 - Sebagai administrator warehouse, agar bisa meningkatkan efisiensi dalam mencari item, saya dapat mencari item dengan memanfaatkan filter yang ada di menu laporan catatan tempat menyimpan item-item warehouse. Databse akan mengirimkan data-data item-item yang bersesuaian dengan filter yang saya terapkan.
@@ -152,7 +152,7 @@ Target dari aplikasi ini adalah karyawan atau seluruh pengurus gudang.
 
 ## F.2 Link Aplikasi
 
-Aplikasi ini di deploy di **https://ngrok.com/**, oleh karena itu jika ingin menggunakan website kami, hubungi kamu.
+Aplikasi ini di deploy di **https://ngrok.com/**, oleh karena itu jika ingin menggunakan website kami, hubungi kami.
 
 # G. Testing (Test Cases)
 
