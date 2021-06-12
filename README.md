@@ -162,12 +162,12 @@ Kami melakukan pengujian secara manual tanpa bantuan tools (postman) atau script
 
 Pengujian positif merupakan jensi pengujian dengan memberikan kumpulan data yang valid sebagai input.
 
-| no  | Scenario                                                                                                          | Preequisites | Steps | Expected Results | Actual Result | Status |
-| --- | ----------------------------------------------------------------------------------------------------------------- | ------------ | ----- | ---------------- | ------------- | ------ |
-| 1   | User login dengan akun valid                                                                                      |              |       |
-| 2   | User mendaftar akun yang tidak valid                                                                              |              |       |
-| 3   | Memasukan barang dengan memasukan nama, deskripsi, kuantitas, lokasi, tanggal masuk, dan tanggal keluar(opsional) |              |       |
-| 4   | Figgima                                                                                                           |              |       |
+| no  | Scenario                                                                                                          | Preequisites                                    | Steps								  | Expected Results | Actual Result | Status |
+| --- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------- | ---------------- | ------------- | ------ |
+| 1   | User login dengan akun valid                                                                                      | User mengakses WareWareHouse        | User klik login lalu memasukkan email serta password lalu klik login| Login berhasil, user dialihkan ke home | As expected | Pass ✔ |
+| 2   | User mendaftar akun yang tidak valid                                                                              | User mengakses WareWareHouse                                                | User mengakses laman sign-up melalui link yang tersedia pada laman login lalu mengisi data yang diperlukan | Pendaftaran Berhasil | As Expected  | Pass ✔ |    								  |
+| 3   | Memasukan barang dengan memasukan nama, deskripsi, kuantitas, lokasi, tanggal masuk, dan tanggal keluar(opsional) | User mengakses WareWareHouse                                                | User pergi ke halaman Transpage lalu klik tambah item lalu mengisikan data yang diperlukan | Barang berhasil ditambahkan | As Expected | Pass ✔   |
+| 4   | Figma                                                                                                             | User mengakses WareWareHouse                                                |       |
 
 ## G.2 Negative Cases
 
@@ -175,7 +175,7 @@ Pengujian negatif merupakan metode pengujian dengan memberikan kumpulan data yan
 
 | no  | Scenario                                                                                                                  | Preequisites | Steps | Expected Results | Actual Result | Status |
 | --- | ------------------------------------------------------------------------------------------------------------------------- | ------------ | ----- | ---------------- | ------------- | ------ |
-| 1   | User login dengan akun tidak valid                                                                                        |              |       |
+| 1   | User login dengan akun tidak valid                                                                                        |              |       | 
 | 2   | User mendaftar akun yang tidak valid                                                                                      |              |       |
 | 3   | Memasukan barang dengan tidak memasukan nama, deskripsi, kuantitas, lokasi, tanggal masuk , dan tanggal keluar (Opsional) |              |       |
 | 4   | Figma                                                                                                                     |              |       |
