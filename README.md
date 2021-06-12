@@ -191,6 +191,7 @@ Pengujian negatif merupakan metode pengujian dengan memberikan kumpulan data yan
 | 1   | User login dengan akun tidak valid                                                                                      | User mengakses WareWareHouse | User klik login lalu memasukkan email serta password lalu klik login                                       | Muncul Pesan Error                | As expected   | Pass ✔ |
 | 2   | User mendaftar akun yang sudah terdaftar                                                                                | User mengakses WareWareHouse | User mengakses laman sign-up melalui link yang tersedia pada laman login lalu mengisi data yang diperlukan | Muncul Pesan Error                | As Expected   | Pass ✔ |     |
 | 3   | Memasukan barang dengan tidak memasukan nama, deskripsi, kuantitas, lokasi, tanggal masuk, dan tanggal keluar(opsional) | User mengakses WareWareHouse | User pergi ke halaman Transpage lalu klik tambah item lalu mengisikan data yang diperlukan                 | Tidak ada barang yang ditambahkan | As Expected   | Pass ✔ |
+| 4   | s                                                                                                                       |
 
 # H. Saran Untuk pengembangan selanjutnya
 
