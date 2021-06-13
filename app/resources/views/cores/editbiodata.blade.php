@@ -30,7 +30,7 @@
                     <textarea class="form-control" id="address" name="address" rows="3">{{$address}}</textarea>
                 </div>
                 <div class="text-right mt-3">
-                    <a href="biodata.html" class="btn btn-primary pull-right">Back</a> &nbsp;
+                    <a href="biodata" class="btn btn-primary pull-right">Back</a> &nbsp;
                     <button type="submit" class="btn btn-primary">Edit</button>
                 </div>
             </form>
