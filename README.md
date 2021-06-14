@@ -116,7 +116,7 @@ Target dari aplikasi ini adalah karyawan atau seluruh pengurus gudang.
 ![DeleteItem](doc/activitydeleteitem.png)
 
 ### Mendownload Data
-![DownloadData](doc/down.png)
+![DownloadData](doc/downrev.png)
 
 ### Mengedit Biodata
 
