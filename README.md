@@ -164,6 +164,35 @@ Target dari aplikasi ini adalah karyawan atau seluruh pengurus gudang.
 
 ## F.1 Screenshoot sistem
 
+### LandingPage
+
+![welcome](doc/landpage.png)
+
+### Login
+
+![Login](doc/login.png)
+
+### Register
+
+![Register](doc/register.png)
+
+### Dashboard
+
+![Dashboard](doc/dashboard.png)
+
+### Transpage
+
+![Transpage](doc/transpage.png)
+
+### Laporan
+
+![Laporan](doc/laporan.png)
+![Laporan](doc/laporan1.png)
+
+### Biodata
+
+![Biodata](doc/biodata.png)
+
 ## F.2 Link Aplikasi
 
 Aplikasi ini di deploy di **https://ngrok.com/**, oleh karena itu jika ingin menggunakan website kami, hubungi kami.
