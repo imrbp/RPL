@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link 
+       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" 
+       rel="stylesheet" 
+    />
+		 <link rel="stylesheet" href="ForgotPass.css" />
+	<title>Security Questions</title>
+  </head>
+  <style>
+	  #button {
+			margin-left : -50px; 
+			width: auto;
+			text-align: center;
+		}
+		#button a:link, a:visited {
+			text-decoration: none;
+			background-color: #01529D;
+			color: white;
+			padding: 5px 15px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 25px;
+			margin: 15px;
+			margin-left : -650px
+		}
+		#button a:hover, a:active { 
+			background-color: #575757;
+		}
+				
+		/* Jendela Pop up */
+		#popup {
+			width: 350%;
+			height: 200%;
+			position: fixed;
+			background: rgba(0,0,0,.6);
+			top: 0;
+			left: 0;
+			z-index: 9999;
+			visibility: hidden;
+			margin-left: -500px;
+			margin-top: -200px;
+		}
+				
+		#window {
+			width: 400px;
+			height: 400px;
+			background: #fff;
+			border-radius: 10px;
+			position: relative;
+			padding: 10px;
+			text-align: center;
+			margin: 15% auto;
+		}
+				
+		#close-button {
+			width: 7%;
+			height: 7%;
+			line-height: 23px;
+			background: #C64848;
+			border-radius: 50%:
+			border: 3px solid #fff;
+			display: block;
+			text-align: center;
+			color: #fff;
+			text-decoration: none;
+			position: absolute;
+			top: -10px;
+			right: -10px;
+		}
+				
+		#popup:target {
+			visibility: visible;
+		}
+  </style>
+  <body>
+    <div class="container" id="container">
+	   <div class="overlay"></div>
+   <form class="box">
+       <div class="header">
+           <h3>Security Questions</h3>
+       </div>
+       <img class="tengah" src="st.png" height="200px"/>
+       <div class="login-area">
+           <input type="text" class="username" placeholder="Childhood nickname">
+           <input type="text" class="username" placeholder="Mother name">
+           <input type="text" class="username" placeholder="Father name">
+           <a href="#popup" type="submit" value="submit" class="submit">Submit</a>
+						<div id="popup">
+							<div id="window">
+								<a href="signinrevisi.html" id="close-button" title="Close">X</a>
+								<div class="i">
+										   <img class="f" src="m2.png" height="200px"/>
+								</div>
+								<h3> Email Verification Link Has Been Send! </h3>
+								<p> We send verification link on your providing email address, please confirm your email address and login to your akun. </p>
+							</div>      
+						</div>
+		</div>
+   </form> 
+  </div>
+    <script src="signupin2.js"></script>
+   </body>
+</html>
