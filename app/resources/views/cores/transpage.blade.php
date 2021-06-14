@@ -28,7 +28,7 @@
                 <td>{{ $item->date_out }}</td>
                 <td>
                     <div class="d-grid gap-2 d-md-block">
-                        <a class="btn btn-danger" href="/item/{{$item->id}}/edit" role="button" id="edit_data">edit</a>
+                        <a class="btn btn-warning" href="/item/{{$item->id}}/edit" role="button" id="edit_data">edit</a>
                         {!!Form::open(['url' => ['item', $item], 'method' => 'POST', 'class' => 'pull-right'])!!}
                             
                                     {{Form::hidden('_method', 'DELETE')}}
