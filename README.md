@@ -51,7 +51,7 @@ Target dari aplikasi ini adalah karyawan atau seluruh pengurus gudang.
 - Sebagai administrator warehouse, agar dapat menggunakan aplikasi secara personal, saya dapat membuat akun terlebih dahulu sebelum login pada menu register di aplikasi. Akun yang saya daftarkan akan tercatat di dalam database dan sistem akan memberikan saya hak akses aplikasi.
 - Sebagai administrator warehouse yang telah logout, agar dapat menggunakan kembali aplikasi secara personal, saya dapat login dengan memasukan username dan password saya pada menu login di aplikasi.
 - Sebagai administrator warehouse, agar dapat menjaga basis data hal-hal yang tidak diinginkan saya dapat memanfaatkan fitur backup dan restore database pada menu backup dan restore. Database akan mengirimkan salinan cadangan kepada saya untuk disimpan di folder lokal
-- Sebagai administrator saya dapat memasukkan dan mengeluarkan barang dengan menggunakan menu transpage di aplikasi. Database dan Sistem akan mengeluarkan atau memasukkan data yang ada ke database.
+- Sebagai administrator warehouse, agar dapat memasukkan dan mengeluarkan barang saya dapat menggunakan menu transpage di aplikasi. Database dan Sistem akan mengeluarkan atau memasukkan data yang ada ke database.
 
 # D. Spesifikasi teknis lingkungan pengembangan
 
@@ -235,8 +235,8 @@ Pengujian negatif merupakan metode pengujian dengan memberikan kumpulan data yan
 
 Puji syukur kehadirat Tuhan Yang Maha Esa atas rahmat-Nya, yang telah memberikan kekuatan kepada kami sehingga dapat menyelesaikan pembuata aplikasi berbasis web yang bernama ware warehouse. Ucapan terima kasih kami sampaikan kepada semua pihak yang telah membantu memperlancar dalam pengerjaan aplikasi ware warehouse hingga terselesaikannya laporan ini, diantaranya :
 
-1. Bapak/Ibu dosen ilmu komputer IPB University yang telah memberikan ilmu dan pengalamannya kepada kami
-2. Kakak-kakak asprak yang telah memberikan masukan dan saran terkait pengembangan aplikasi ware warehouse
+1. Bapak/Ibu dosen ilmu komputer IPB University yang telah memberikan ilmu dan pengalamannya kepada kami.
+2. Kakak-kakak asprak yang telah memberikan masukan dan saran terkait pengembangan aplikasi ware warehouse.
 
 Kami berharap semoga laporan tugas akhir ini dapat bermanfaat bagi banyak pihak. Tak lupa kami mohon maaf atas segala kekurangan kami dalam pengembangan aplikasi ware warehouse serta dalam penyusunan laporan ini.
 
