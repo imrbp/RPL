@@ -51,6 +51,7 @@ Target dari aplikasi ini adalah karyawan atau seluruh pengurus gudang.
 - Sebagai administrator warehouse, agar dapat menggunakan aplikasi secara personal, saya dapat membuat akun terlebih dahulu sebelum login pada menu register di aplikasi. Akun yang saya daftarkan akan tercatat di dalam database dan sistem akan memberikan saya hak akses aplikasi.
 - Sebagai administrator warehouse yang telah logout, agar dapat menggunakan kembali aplikasi secara personal, saya dapat login dengan memasukan username dan password saya pada menu login di aplikasi.
 - Sebagai administrator warehouse, agar dapat menjaga basis data hal-hal yang tidak diinginkan saya dapat memanfaatkan fitur backup dan restore database pada menu backup dan restore. Database akan mengirimkan salinan cadangan kepada saya untuk disimpan di folder lokal
+- Sebagai administrator saya dapat memasukkan dan mengeluarkan barang dengan menggunakan menu transpage di aplikasi. Database dan Sistem akan mengeluarkan atau memasukkan data yang ada ke database.
 
 # D. Spesifikasi teknis lingkungan pengembangan
 
