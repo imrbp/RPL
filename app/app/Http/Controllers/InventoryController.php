@@ -36,8 +36,6 @@ class InventoryController extends Controller
     public function transpage()
     {
         //
-
-
         $data = Inventory::paginate(10);
         return view('cores.transpage', ['datas' =>  $data]);
     }
@@ -223,8 +221,11 @@ class InventoryController extends Controller
      */
     public function destroy($id)
     {
+        $data = Inventory::find($id);
         $item = Inventory::where('id', $id);
+        $items= Item::find($data['item_id']);
         $item->delete();
+        $items->delete();
         return redirect('/transpage');
     }
 
